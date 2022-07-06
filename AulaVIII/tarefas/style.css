@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    border: none;
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+}
+
+#principal{
+
+}
+
+#titulo{
+    padding: 20px;
+
+}
+
+#addTarefas{
+    border: 2px solid #000000;
+    
+}
+
+#btnMais{
+    color: white;
+    background: black;
+    width: 20px;
+    height: 20px;
+
+}
+
+#placar1{
+    display: flex;
+   
+}
+
+#placar2{
+    display: flex;
+    
+}
+
+.numbPlacar, p{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+#linhaDeSeparacao{
+    margin-top:20px;
+    margin-bottom:5px;
+    border: 0;
+	border-top: 3px solid #000000;
+    border-radius: 10px;
+}
