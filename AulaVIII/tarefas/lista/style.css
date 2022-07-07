@@ -12,7 +12,7 @@ body{
     align-items:center;
     width:100vw;
     height:100vh;
-    background-color: rgba(111, 241, 4, 0.548);
+    background-color: rgba(0, 0, 0, 0.603);
 }
 
 #principal{
@@ -25,41 +25,74 @@ body{
 }
 
 #titulo{
-    padding: 20px;
+    margin: 20px;
     font-family: 'Rubik Moonrocks', cursive;
     font-size: 30px;
+    
 }
 
 #addTarefas{
-    border: 2px solid #000000;
+    
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 20px;
 }
 
 #tarefaNova{
-    height: 20px;
+    height: 30px;
     width: 350px;
     padding-left: 10px;
     font-family: 'Indie Flower'; 
     font-weight: 600;
     font-size: 18px;
+    border-radius: 20px 0 0 20px;
+    
 }
 
 #btnMais{
     color: rgb(236, 227, 227);
     background: black;
     width: 30px;
-    height: 20px;
+    height: 30px;
     font-size: 20px;
+    border-radius: 0 20px 20px 0 ;
+}
+
+.checkbox{
+    padding-top: 20px;
+}
+
+.tarefa{
+    font-family: 'Indie Flower'; 
+    font-weight: 600;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.riscar{
+    text-decoration: line-through;
+}
+
+#img{
+    width:23px;
+    height: 23px;
+   
 }
 
 #placar1{
     display: flex;
+    font-weight: 600;
+    
    
 }
 
 #placar2{
     display: flex;
+    font-weight: 600;
     
 }
 
@@ -70,7 +103,7 @@ body{
 #linhaDeSeparacao{
     margin-top:20px;
     margin-bottom:20px;
-	border: 1.9px solid #000000;
+	border: 1.9px solid #fffdfd;
     border-radius: 10px;
-    background-color: #efeff3;
+    background-color: #ececf0;
 }

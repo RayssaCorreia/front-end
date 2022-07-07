@@ -11,24 +11,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Indie+Flower&family=Rubik+Moonrocks&display=swap" rel="stylesheet">  
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title>Lista de tarefas</title>
 </head>
 
 <body>
-
+    
     <div id="principal">
+        
         <div id="titulo">
             Minha lista de tarefas
         </div>
 
         <div id="addTarefas">
-
                 <input type="text" id="tarefaNova" placeholder="Nova tarefa">
                 <button id="btnMais">+</button>
-
         </div>
 
         <div class="tarefas">
+
+            <div class="tarefa">
+                <div>
+                    <input type = "checkbox" id= "checkbox" name = "subscribe" value = "newsletter">
+                    <label for = "subscribeNews" class="taref"> Post </label>
+                </div>  
+
+                <!-- <img src="./img/delete_FILL0_wght400_GRAD0_opsz48.png" id="img" alt="Deletar"> -->
+                <i data-feather="trash-2" style="background-color:rgb(255, 255, 255);border-radius: 10px;"></i>
+
+            </div>
 
         </div>
         <div id="placar">
