@@ -2,7 +2,7 @@
 const paginaHTML = document.querySelector("#page");
 
 // Quando não tem metodo, ele fas get 
-fetch("https://api.github.com/users/RayssaCorreia/repos")
+//fetch("https://api.github.com/users/RayssaCorreia/repos")
 
     //quando eu receber, será em jason
     .then(response => {
