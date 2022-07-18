@@ -37,10 +37,13 @@ body{
     width: 300px;
     padding-left: 10px;
 }
-.pagina{
-    
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h3{
     padding-top: 20px;
+    color:white;
 }
