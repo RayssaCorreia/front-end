@@ -1,26 +1,37 @@
-// está é minha div do HTML
-const paginaHTML = document.querySelector("#page");
-
-// Quando não tem metodo, ele fas get 
-//fetch("https://api.github.com/users/RayssaCorreia/repos")
-
-    //quando eu receber, será em jason
-    .then(response => {
-        return response.json()
-
-    })
-    // se der error mostrar:
-    .catch((error) => {
-        console.log('Error:', error);
-    })
-    //tudo certo, pega a resposta e printa ne tela HTML
-    .then(response => {
-       mostrar(response)
-
-    })
+feather.replace()
 
 
-function mostrar(valor) {
-    //a div em formato texto, recebe o valor jason como string
-    paginaHTML.innerText = JSON.stringify(valor)
+const paginaHTML = document.querySelector("#pagina")
+const barraHTML = document.querySelector(".barra_pesquisa")
+const botaoHTML = document.querySelector("#pesquisar")
+
+let Usuario = []
+
+barraHTML.onkeyup = () => {
+     Usuario = barraHTML.value
+}
+
+botaoHTML.onclick = () => {
+    if (Usuario.length > 0) {
+        view()
+        alert(`Repositórios de ${Usuario}`)
+    }
+}
+
+const view = async () => {
+    const repositoriosWeb = await fetch(`https://api.github.com/users/${Usuario}/repos`)
+    const repositorios = await repositoriosWeb.json();
+
+    paginaHTML.innerHTML = ""
+
+    repositorios.forEach(repositorio => {
+        const html = 
+            `<div class="repositorio">
+                <h3>${repositorio.name}</h3>
+                <p>${repositorio.language}</p>
+            </div>`;
+
+        
+        paginaHTML.innerHTML += html
+   })
 }

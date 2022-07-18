@@ -6,14 +6,21 @@
     outline: none;
 }
 body{
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(69, 30, 85);
+    flex-direction: column;
+    gap:30px;
 }
 
 #addGit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 3px solid #000000;
-    width: 239px;
+    width: auto;
     height: 30px;
 }
 
@@ -23,4 +30,17 @@ body{
     width: 30px;
     height: 30px;
     font-size: 20px;
+}
+
+.barra_pesquisa{
+    height: 30px;
+    width: 300px;
+    padding-left: 10px;
+}
+.pagina{
+    
+}
+
+h3{
+    padding-top: 20px;
 }
