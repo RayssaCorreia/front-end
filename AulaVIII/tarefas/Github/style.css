@@ -41,9 +41,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 h3{
     padding-top: 20px;
     color:white;
+}
+p{
+    color:rgb(21, 184, 29);
 }

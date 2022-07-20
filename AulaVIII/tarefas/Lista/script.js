@@ -1,15 +1,30 @@
 feather.replace()
 
+const divTarefa = document.createElement("div");
+divTarefa.setAttribute("class", "tarefa");
+document.getElementById("tarefas").appendChild(divTarefa);
+
+const checkbox = document.createElement("input");
+checkbox.setAttribute("type", "checkbox");
+document.querySelector(".tarefa").appendChild(checkbox);
+
+const textoTarefa = document.createElement("label")
+
+
+
+// GET //
 async function apiGetTask(){
 
     const url = 'http://localhost:3000/tasks'
 
     const response = await fetch(url);
 
-    return await response.json()
+    //return await response.json()
+    console.log( await response.json());
+    
 }
 
-
+// POST //
 async function apiCreateTask(description, complete) {
 
     const newTask = {description, complete}
@@ -27,9 +42,12 @@ async function apiCreateTask(description, complete) {
 
     const response = await fetch(url, options);
 
-    return await response.json()
+    
+    console.log( await response.json());
 }
 
+
+// DELETE //
 async function apiDeleteTask(id) {
 
     const url = `http://localhost:3000/tasks/${id}`
@@ -48,6 +66,8 @@ async function apiDeleteTask(id) {
     }
 }
 
+
+// PATCH //
 async function apiUpdateTask(id, complete){
 
     const newTask = {complete}
@@ -64,17 +84,15 @@ async function apiUpdateTask(id, complete){
 
     const response = await fetch(url, options);
 
-    // return await response.json()
-
     if(response.status == 204){
         console.log("Tarefa atualizada com sucesso")
     }
 }
 
-// apiCreateTask("xuaaaaa", true);
+//apiCreateTask("dfdsfg", true);
 
-// apiGetTask() // retorna a lista de Tarefas
+//apiGetTask() // retorna a lista de Tarefas
 
-apiUpdateTask(17, false) 
+//apiUpdateTask(128, false) 
 
-// apiDeleteTask(8)
+//apiDeleteTask(126)
